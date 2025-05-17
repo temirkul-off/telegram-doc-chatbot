@@ -1,0 +1,14 @@
+# Python artifacts
+*.pyc
+__pycache__/
+
+# Virtual environment
+.venv/
+env/
+venv/
+
+# dotenv
+.env
+
+# HuggingFace & pip cache (optional, if on same folder)
+.cache/
