@@ -4,12 +4,28 @@ load_dotenv()
 from telegram.ext import (
     ApplicationBuilder,
     MessageHandler,
+    CommandHandler,
     filters
 )
+
 from qa_pipeline import conv_chain, db
 
 TOKEN = dotenv_values().get("TOKEN")
 user_chains = {}
+
+async def start(update, ctx):
+    await update.message.reply_text(
+        "👋 Hello! I’m *Doctor Doc* 📚\n"
+        "I know everything about the Hogwarts Summer Camp 🧙‍♂️🏕️\n"
+        "Ask me anything—*but only* about the Camp! 😉",
+        parse_mode="Markdown"
+    )
+    
+async def source(update, ctx):
+    await update.message.reply_text(
+        "🔍 I was trained on the official Hogwarts Summer Camp document:\n"
+        "https://docs.google.com/document/d/1PmXpxXUvaAMN_hnCxNfrh8o3fUu0hVQSg3VKsWR0k7Y/edit?usp=sharing"
+    )
 
 async def handle_message(update, ctx):
     chat_id = update.effective_chat.id
