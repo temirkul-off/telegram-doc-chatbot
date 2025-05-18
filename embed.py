@@ -1,10 +1,10 @@
 from dotenv import load_dotenv
 load_dotenv()
 
-
-from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain_huggingface.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
+from langchain_huggingface.embeddings import HuggingFaceEmbeddings
+from langchain.text_splitter import RecursiveCharacterTextSplitter
+
 
 with open("main_doc.txt", encoding="utf-8") as f:
     text = f.read()
