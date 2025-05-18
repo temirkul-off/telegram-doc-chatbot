@@ -43,7 +43,6 @@ A free, open-source Telegram chatbot that answers **only** from a specified Goog
 1. **Embed your docs (only first run or when data changes):**
 ```bash
    python embed.py
-
 ```
 2. **Start the bot:**
 ```bash
