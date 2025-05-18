@@ -35,7 +35,7 @@ A free, open-source Telegram chatbot that answers **only** from a specified Goog
    pip install -r requirements.txt
 ```
 4. **Set up your environment**:
-- Create .env file in the root of your project
+- Create `.env` file in the root of your project
 - Add the `TOKEN` variable and store your telegram bot token there
 
 ## ⚙️ Usage
