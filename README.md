@@ -36,27 +36,32 @@ A free, open-source Telegram chatbot that answers **only** from a specified Goog
 ```
 4. **Set up your environment**:
 - Create .env file in the root of your project
-- Add the TOKEN variable and store your telegram bot token there
+- Add the `TOKEN` variable and store your telegram bot token there
 
 ## ⚙️ Usage
 
 1. **Embed your docs (only first run or when data changes):**
-- Run embed.py
+```bash
+   python embed.py
+
+```
 2. **Start the bot:**
-- Run bot.py
+```bash
+   python bot.py
+```
 
 ## 🏗 Architecture
 
 1. **Data preparation**:
 - I downloaded the main document and doc-files inside as .txt format.
-- I cleaned them up from grammar mistakes, unneccessary info, structured better and merged them all together into the single main_doc.txt file.
+- I cleaned them up from grammar mistakes, unneccessary info, structured better and merged them all together into the single `main_doc.txt` file.
 2. **Data ingestion**
-- embed.py reads the  data file, chunks it, embeds with Sentence-Transformers, and stores vectors in FAISS.
+- `embed.py` reads the `main_doc.txt` data file, chunks it, embeds with Sentence-Transformers, and stores vectors in FAISS.
 3. **Retrieval-augmented generation**
-- qa_pipeline.py loads FAISS + a local LLM (e.g. Flan-T5-base).
+- `qa_pipeline.py` loads FAISS + a local LLM (e.g. Flan-T5-base).
 - Builds a ConversationalRetrievalChain with per-chat memory.
 4. **Telegram integration**
-- bot.py listens for messages, checks “in scope” with a quick FAISS similarity search, invokes the chain, logs the Q&A, and replies.
+- `bot.py` listens for messages, checks “in scope” with a quick FAISS similarity search, invokes the chain, logs the Q&A, and replies.
 
 ## ⚠️ Limitations
 - Locally hosted LLMs may require substantial RAM/GPU.
