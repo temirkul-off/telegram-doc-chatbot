@@ -13,7 +13,7 @@ A free, open-source Telegram chatbot that answers **only** from a specified Goog
 ## 🚀 Features
 
 - **Document-only answers**: refuses any out-of-scope questions
-- **Original document**: 
+- **Original document**: https://docs.google.com/document/d/1PmXpxXUvaAMN_hnCxNfrh8o3fUu0hVQSg3VKsWR0k7Y/edit?usp=sharing
 - **Conversational memory**: carries context turn-to-turn per user
 - **Free & local**: no paid APIs; run everything on your own hardware
 
@@ -21,7 +21,7 @@ A free, open-source Telegram chatbot that answers **only** from a specified Goog
 
 1. **Clone the repo**:
 ```bash
-   git clone https://github.com/yourusername/telegram-doc-chatbot.git
+   git clone https://github.com/temirkul-off/telegram-doc-chatbot.git
    cd telegram-doc-chatbot
 ```
 2. **Create & activate a venv**:
